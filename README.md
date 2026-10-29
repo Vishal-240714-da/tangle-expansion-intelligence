@@ -1,10 +1,10 @@
-# TANGLE Expansion Intelligence
+﻿# TANGLE Expansion Intelligence
 
-AI-powered, evidence-grounded business expansion decision-support platform for independent café owners.
+AI-powered, evidence-grounded business expansion decision-support platform for independent cafÃ© owners.
 
 ## Overview
 
-TANGLE (Transparent Analysis of Natural and Geographic Linked Evidence) helps café operators evaluate expansion opportunities by combining cultural affinity signals, geographic context, business assumptions, concept exploration, scenario comparison, and risk assessment.
+TANGLE (Transparent Analysis of Natural and Geographic Linked Evidence) helps cafÃ© operators evaluate expansion opportunities by combining cultural affinity signals, geographic context, business assumptions, concept exploration, scenario comparison, and risk assessment.
 
 **Key Principle**: TANGLE is a decision-support tool, not an autonomous decision-maker. It distinguishes actual evidence from assumptions, synthetic examples, heuristics, and AI-generated hypotheses.
 
@@ -14,21 +14,21 @@ TANGLE (Transparent Analysis of Natural and Geographic Linked Evidence) helps ca
 - **Conservative Geographic Validation**: Strict multi-tier matching (exact city match, metro area matching, district rejection) preventing suburban/district entities from being falsely marked as local city proper
 - **Confidence Scoring & Abstention**: Transparent confidence metrics with explicit abstention warnings when evidence coverage or local signal density is insufficient
 - **Evidence-to-Decision Graph**: Concept hypotheses and risk factors explicitly link to supporting evidence entity IDs for end-to-end traceability
-- **Culture-to-Café Concept Generator**: Generates grounded concept hypotheses clearly labelled as requiring commercial validation
+- **Culture-to-CafÃ© Concept Generator**: Generates grounded concept hypotheses clearly labelled as requiring commercial validation
 - **Expansion Risk Radar**: Categorizes operational, cultural, regulatory, and market risks with severity rankings and validation recommendations
 - **Interactive What-If Scenario Simulator**: Real-time editable financial sliders (footfall, average transaction value, rent, staffing, ingredient costs) with live delta calculations vs. baseline
 - **Resilient Dual Storage Architecture**: Operates seamlessly in memory when PostgreSQL is unconfigured or unavailable, with automatic schema initialization when `DATABASE_URL` is provided
 
 ## Non-Negotiable Principles
 
-1. **Never fabricate live evidence** — only use actual Qloo API responses or honest synthetic demo fixtures.
-2. **Never expose API credentials** — keys and tokens remain strictly server-side.
-3. **Never treat global affinity as local demand** — global patterns do not prove local market viability.
-4. **Never treat affinity as probability of commercial success** — cultural resonance indicates affinity, not business solvency.
-5. **Never treat a state or district match alone as proof of an exact city match** — suburban or district entities (e.g. Egattur, Kanathur) are not labeled as verified city proper.
-6. **Never automatically mark geographically uncertain entities as verified** — entities missing explicit city confirmation remain conservative partial-matches or no-matches.
-7. **Never conceal missing data or uncertainty** — transparently abstain when evidence is sparse, and honestly distinguish `live-qloo` from `cached-qloo`.
-8. **Never silently fall back to demo data** — analysis-level provenance always reflects actual execution data source.
+1. **Never fabricate live evidence** â€” only use actual Qloo API responses or honest synthetic demo fixtures.
+2. **Never expose API credentials** â€” keys and tokens remain strictly server-side.
+3. **Never treat global affinity as local demand** â€” global patterns do not prove local market viability.
+4. **Never treat affinity as probability of commercial success** â€” cultural resonance indicates affinity, not business solvency.
+5. **Never treat a state or district match alone as proof of an exact city match** â€” suburban or district entities (e.g. Egattur, Kanathur) are not labeled as verified city proper.
+6. **Never automatically mark geographically uncertain entities as verified** â€” entities missing explicit city confirmation remain conservative partial-matches or no-matches.
+7. **Never conceal missing data or uncertainty** â€” transparently abstain when evidence is sparse, and honestly distinguish `live-qloo` from `cached-qloo`.
+8. **Never silently fall back to demo data** â€” analysis-level provenance always reflects actual execution data source.
 
 ## Tech Stack
 
@@ -50,49 +50,49 @@ TANGLE (Transparent Analysis of Natural and Geographic Linked Evidence) helps ca
 
 ```
 pro/
-├── backend/                 # Node.js/Express API server
-│   ├── src/
-│   │   ├── __tests__/      # Backend test suites (services & routes)
-│   │   ├── middleware/     # Error handling & security middleware
-│   │   ├── models/         # Database models & in-memory store
-│   │   ├── routes/         # Express API routes (health, analysis, scenarios, reports)
-│   │   ├── services/       # Core business logic (analysis, Qloo, confidence, risk, etc.)
-│   │   │   └── qloo/       # Qloo v2 Insights API integration
-│   │   ├── types/          # TypeScript types
-│   │   └── index.ts        # Express entry point
-│   ├── .env.example        # Backend environment template
-│   ├── .eslintrc.js        # ESLint configuration
-│   ├── jest.config.js      # Jest configuration
-│   ├── package.json        # Backend package manifest
-│   └── tsconfig.json       # TypeScript configuration
-├── frontend/                # React/Vite dashboard application
-│   ├── src/
-│   │   ├── __tests__/      # Frontend test suites (response handling)
-│   │   ├── components/     # UI components (dashboard, layout, common)
-│   │   ├── pages/          # AnalysisForm and AnalysisDashboard views
-│   │   ├── types/          # Frontend TypeScript definitions
-│   │   ├── App.tsx         # Main application routes
-│   │   ├── main.tsx        # React DOM entry point
-│   │   └── index.css       # Tailwind CSS styles
-│   ├── .eslintrc.cjs       # Frontend ESLint configuration
-│   ├── index.html          # HTML entry template
-│   ├── package.json        # Frontend package manifest
-│   ├── postcss.config.js   # PostCSS configuration
-│   ├── tailwind.config.js  # Tailwind CSS configuration
-│   ├── tsconfig.json       # Frontend TypeScript configuration
-│   └── vite.config.ts      # Vite bundler configuration
-├── shared/                  # Shared TypeScript types
-│   ├── src/
-│   │   └── types/          # Canonical cross-workspace types
-│   ├── package.json        # Shared package manifest
-│   └── tsconfig.json       # Shared TypeScript configuration
-├── .env.example             # Root environment template
-├── .gitignore               # Version control exclusion rules
-├── AGENTS.md                # AI agent operating guidelines
-├── ARCHITECTURE.md          # System architecture & data flow documentation
-├── package-lock.json        # Locked dependency tree
-├── package.json             # Root npm workspace manifest
-└── README.md                # Project documentation and setup guide
+â”œâ”€â”€ backend/                 # Node.js/Express API server
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ __tests__/      # Backend test suites (services & routes)
+â”‚   â”‚   â”œâ”€â”€ middleware/     # Error handling & security middleware
+â”‚   â”‚   â”œâ”€â”€ models/         # Database models & in-memory store
+â”‚   â”‚   â”œâ”€â”€ routes/         # Express API routes (health, analysis, scenarios, reports)
+â”‚   â”‚   â”œâ”€â”€ services/       # Core business logic (analysis, Qloo, confidence, risk, etc.)
+â”‚   â”‚   â”‚   â””â”€â”€ qloo/       # Qloo v2 Insights API integration
+â”‚   â”‚   â”œâ”€â”€ types/          # TypeScript types
+â”‚   â”‚   â””â”€â”€ index.ts        # Express entry point
+â”‚   â”œâ”€â”€ .env.example        # Backend environment template
+â”‚   â”œâ”€â”€ .eslintrc.js        # ESLint configuration
+â”‚   â”œâ”€â”€ jest.config.js      # Jest configuration
+â”‚   â”œâ”€â”€ package.json        # Backend package manifest
+â”‚   â””â”€â”€ tsconfig.json       # TypeScript configuration
+â”œâ”€â”€ frontend/                # React/Vite dashboard application
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ __tests__/      # Frontend test suites (response handling)
+â”‚   â”‚   â”œâ”€â”€ components/     # UI components (dashboard, layout, common)
+â”‚   â”‚   â”œâ”€â”€ pages/          # AnalysisForm and AnalysisDashboard views
+â”‚   â”‚   â”œâ”€â”€ types/          # Frontend TypeScript definitions
+â”‚   â”‚   â”œâ”€â”€ App.tsx         # Main application routes
+â”‚   â”‚   â”œâ”€â”€ main.tsx        # React DOM entry point
+â”‚   â”‚   â””â”€â”€ index.css       # Tailwind CSS styles
+â”‚   â”œâ”€â”€ .eslintrc.cjs       # Frontend ESLint configuration
+â”‚   â”œâ”€â”€ index.html          # HTML entry template
+â”‚   â”œâ”€â”€ package.json        # Frontend package manifest
+â”‚   â”œâ”€â”€ postcss.config.js   # PostCSS configuration
+â”‚   â”œâ”€â”€ tailwind.config.js  # Tailwind CSS configuration
+â”‚   â”œâ”€â”€ tsconfig.json       # Frontend TypeScript configuration
+â”‚   â””â”€â”€ vite.config.ts      # Vite bundler configuration
+â”œâ”€â”€ shared/                  # Shared TypeScript types
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â””â”€â”€ types/          # Canonical cross-workspace types
+â”‚   â”œâ”€â”€ package.json        # Shared package manifest
+â”‚   â””â”€â”€ tsconfig.json       # Shared TypeScript configuration
+â”œâ”€â”€ .env.example             # Root environment template
+â”œâ”€â”€ .gitignore               # Version control exclusion rules
+â”œâ”€â”€ AGENTS.md                # AI agent operating guidelines
+â”œâ”€â”€ ARCHITECTURE.md          # System architecture & data flow documentation
+â”œâ”€â”€ package-lock.json        # Locked dependency tree
+â”œâ”€â”€ package.json             # Root npm workspace manifest
+â””â”€â”€ README.md                # Project documentation and setup guide
 ```
 
 ## Quick Start
@@ -287,7 +287,7 @@ npm test
 
 ## License
 
-This project was developed as a hackathon submission. No formal open-source license has been specified; all rights are reserved by the authors unless otherwise stated.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contributing
 
@@ -296,3 +296,4 @@ This repository is a finalized hackathon submission. Public contributions and pu
 ## Support
 
 This project is provided as-is for hackathon evaluation and demonstration. No formal support channels or SLA are maintained. For evaluation questions, please refer to the project documentation (`README.md`, `ARCHITECTURE.md`, `AGENTS.md`).
+
