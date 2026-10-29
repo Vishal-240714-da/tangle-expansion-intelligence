@@ -1,3 +1,4 @@
+import path from 'path';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -42,6 +43,21 @@ app.use('/api/health', healthRouter);
 app.use('/api/analysis', analysisRouter);
 app.use('/api/scenarios', scenarioRouter);
 app.use('/api/reports', reportRouter);
+// Serve the built React frontend from the same Render service
+const frontendDistPath = path.resolve(__dirname, '../../frontend/dist');
+
+app.use(express.static(frontendDistPath));
+
+// Return the React app for browser routes, but preserve API 404 responses
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api/')) {
+    return next();
+  }
+
+  res.sendFile(path.join(frontendDistPath, 'index.html'), (err) => {
+    if (err) next(err);
+  });
+});
 
 // 404 handler for unmatched routes
 app.use((req, res, next) => {
